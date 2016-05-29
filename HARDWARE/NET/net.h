@@ -20,6 +20,7 @@ void UpLoadZigbeeEndDeviceSensorDataToCloud(void);
 void UpLoadZigbeeEndDeviceOtherSensorDataToCloud(void);
 void SwitchDetect( );
 extern uint16_t VirtAddVarTab[57];
+extern int ServerConnectState;
 #endif
 
 /*

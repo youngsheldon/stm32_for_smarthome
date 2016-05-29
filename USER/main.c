@@ -35,6 +35,7 @@ int main(void)
 	StartToUploadFlag = 1;
 	while(1) 
 	{		
+		if(ServerConnectState)
 		MainMenuIntoSubMenu();
 		SwitchDetect();
 	}

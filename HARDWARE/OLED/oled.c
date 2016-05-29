@@ -161,6 +161,18 @@ void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 len)
 			break;
 	}
 }
+//显示不定长字符串
+void OLED_ShowString_Long(u8 x,u8 y,u8 *chr)
+{
+	unsigned char j=0;
+	while (chr[j]!='\0')
+	{		OLED_ShowChar(x,y,chr[j]);
+			x+=8;
+		if(x>120){x=0;y+=2;}
+			j++;
+	}
+}
+
 //显示汉字
 void OLED_ShowCHinese(u8 x,u8 y,u8 no)
 {      			    

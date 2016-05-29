@@ -3,21 +3,46 @@
 char temperature[][18] = {"dev1->temperature","dev2->temperature","dev3->temperature","dev4->temperature","dev5->temperature"};
 char humidity[][15] = {"dev1->humidity","dev2->humidity","dev3->humidity","dev4->humidity","dev5->humidity"};
 
+int ServerConnectState = 1;
+
+void NetStartShow()
+{
+    if(RxCompeleteFlag == 1)
+    {
+        RxCompeleteFlag = 0;
+        OLED_ShowString_Long(0,0,SaveRxBuffer);
+        memset(SaveRxBuffer,0,600);
+        RXCouter = 0;
+    }
+}
+
 void NET_Init(void)
 {
     delay_ms(400);
     Uart2_Put_String("AT+CIPSTART=\"TCP\",\"183.230.40.39\",876\r\n");
     delay_ms(200);
+    OLED_Clear();
+    NetStartShow();
     Uart2_Put_String("AT+CIPMODE=1\r\n");
     delay_ms(200);
+    OLED_Clear();
+    NetStartShow();
     Uart2_Put_String("AT+CIPSEND\r\n");
     delay_ms(200);
+    OLED_Clear();
+    NetStartShow();
     Uart2_Put_String("AT+CIPSTART=\"TCP\",\"183.230.40.39\",876\r\n");
     delay_ms(200);
+    OLED_Clear();
+    NetStartShow();
     Uart2_Put_String("AT+CIPMODE=1\r\n");
     delay_ms(100);
+    OLED_Clear();
+    NetStartShow();
     Uart2_Put_String("AT+CIPSEND\r\n");
     delay_ms(200);
+    OLED_Clear();
+    NetStartShow();
     LED3 = 0;
 }
 
@@ -136,9 +161,6 @@ void SwitchDetect( )
     if(RxCompeleteFlag == 1)
     {
         RxCompeleteFlag = 0;
-        LED2 = 0;
-        delay_ms(20);
-        LED2 = 1;
         if(SaveRxBuffer[44]=='A' && SaveRxBuffer[45]=='1')
         {
             ChangeComand(3,17,1);
@@ -286,13 +308,18 @@ void SwitchDetect( )
         if(SaveRxBuffer[0] == 0x40 && SaveRxBuffer[1] == 0x01 && SaveRxBuffer[2] == 0x3C )
         {
             StartToUploadFlag = 0;
+            ServerConnectState = 0;
+            OLED_Clear();
+            OLED_ShowCHinese(0,4,48); //网络异常
+            OLED_ShowCHinese(0,4,64); 
+            OLED_ShowCHinese(0,4,80); 
+            OLED_ShowCHinese(0,4,96); 
             delay_ms(100);
             ConnectToDevice( );
             delay_ms(100);
+            OLED_Clear();
             StartToUploadFlag = 1;
-            LED2 = 0;
-            delay_ms(100);
-            LED2 = 1;
+            ServerConnectState = 1;
         }
         //esp8266异常重启处理
         if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
