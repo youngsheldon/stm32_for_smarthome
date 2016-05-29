@@ -467,11 +467,10 @@ ARM Macro Assembler    Page 8
   307 00000018                 END
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\obj\s
-tartup_stm32f10x_md.d -o..\obj\startup_stm32f10x_md.o -IC:\Users\Administrator\
-Desktop\code\ÕûºÏ2\Ö÷¿Ø°å\USER\RTE -ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0
-.0 -ID:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="
-STM32F10X_MD SETA 1" --list=.\startup_stm32f10x_md.lst ..\CORE\startup_stm32f10
-x_md.s
+tartup_stm32f10x_md.d -o..\obj\startup_stm32f10x_md.o -IE:\www\stm32_for_smarth
+ome\USER\RTE -ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0 -ID:\Keil_v5\ARM\CM
+SIS\Include --predefine="__MICROLIB SETA 1" --predefine="STM32F10X_MD SETA 1" -
+-list=.\startup_stm32f10x_md.lst ..\CORE\startup_stm32f10x_md.s
 
 
 

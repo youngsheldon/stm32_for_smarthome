@@ -65,24 +65,32 @@ void UpLoadData(char *Name,int Data)
 void UpLoadZigbeeEndDeviceOtherSensorDataToCloud(void)
 {
     //节点1(阳台)
+    if(DeviceOnlineState[0])
     UpLoadData("dev1->SoilHumidity",dev1.SoilHumidity);
     delay_us(10);
+    if(DeviceOnlineState[0])
     UpLoadData("dev1->LightIllumination",dev1.LightIllumination);
     delay_us(10);
     //节点2(厨房)
+    if(DeviceOnlineState[1])
     UpLoadData("dev2->GasConcentration",dev2.GasConcentration);
     delay_us(10);
+    if(DeviceOnlineState[1])
     UpLoadData("dev2->FireFlag",!dev2.FireFlag);
     delay_us(10);
     //节点3(卧室)
+    if(DeviceOnlineState[2])
     UpLoadData("dev3->LightIllumination",dev3.LightIllumination);
     delay_us(10);
     //节点4(户外)
+    if(DeviceOnlineState[3])
     UpLoadData("dev4->LightIllumination",dev4.LightIllumination);
     delay_us(10);
+    if(DeviceOnlineState[3])
     UpLoadData("dev4->RainFlag",!dev4.RainFlag);
     delay_us(10);
     //节点5(门外)
+    if(DeviceOnlineState[4])
     UpLoadData("dev5->HumanFlag",dev5.HumanFlag);
     delay_us(10);
 }
@@ -90,25 +98,35 @@ void UpLoadZigbeeEndDeviceOtherSensorDataToCloud(void)
 void UpLoadZigbeeEndDeviceSensorDataToCloud(void)
 {
     //温度数据
+    if(DeviceOnlineState[0])
     UpLoadData(temperature[0],dev1.Tempeture);
     delay_us(10);
+    if(DeviceOnlineState[1])
     UpLoadData(temperature[1],dev2.Tempeture);
     delay_us(10);
+    if(DeviceOnlineState[2])
     UpLoadData(temperature[2],dev3.Tempeture);
     delay_us(10);
+    if(DeviceOnlineState[3])
     UpLoadData(temperature[3],dev4.Tempeture);
     delay_us(10);
+    if(DeviceOnlineState[4])
     UpLoadData(temperature[4],dev5.Tempeture);
     delay_us(10);
     //湿度数据
+    if(DeviceOnlineState[0])
     UpLoadData(humidity[0],dev1.Humity);
     delay_us(10);
+    if(DeviceOnlineState[1])
     UpLoadData(humidity[1],dev2.Humity);
     delay_us(10);
+    if(DeviceOnlineState[2])
     UpLoadData(humidity[2],dev3.Humity);
     delay_us(10);
+    if(DeviceOnlineState[3])
     UpLoadData(humidity[3],dev4.Humity);
     delay_us(10);
+    if(DeviceOnlineState[4])
     UpLoadData(humidity[4],dev5.Humity);
     delay_us(10);
 }

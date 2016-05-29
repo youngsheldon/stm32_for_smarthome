@@ -144,7 +144,6 @@ void HexToString(u8 HighBit,u8 LowBit,u8 *out)
 	*(out + 2) = (int)DecToHex[LowBit/16];
 	*(out + 3) = (int)DecToHex[LowBit%16];
 }
-
 // #define DHT11 1
 // #define LIGHTED 2
 // #define DS18B20 3

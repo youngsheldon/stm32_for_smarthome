@@ -1,0 +1,156 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.12.0.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: young sheldon, gdou, LIC=MGXAR-KFL65-SFSI0-BEHZC-DMA3P-8B9Z1
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.12.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 (build 41)
+Assembler:       Armasm.exe V5.05 (build 41)
+Linker/Locator:  ArmLink.exe V5.05 (build 41)
+Library Manager: ArmAr.exe V5.05 (build 41)
+Hex Converter:   FromElf.exe V5.05 (build 41)
+CPU DLL:         SARMCM3.DLL V5.12.0.0
+Dialog DLL:      DCM.DLL V1.13.0.0
+    Target DLL: Segger\JL2CM3.dll
+Dialog DLL:      TCM.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+E:\www\stm32_for_smarthome\USER\OLED.uvprojx
+Project File Date:  04/25/2016
+
+<h2>Output:</h2>
+Build target 'OLED'
+compiling main.c...
+ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
+  void MainMenuItemShow();
+ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
+  void MainMenuIntoSubMenu();
+..\HARDWARE\NET\net.h(21): warning:  #1295-D: Deprecated declaration SwitchDetect - give arg types
+  void SwitchDetect( );
+main.c: 3 warnings, 0 errors
+compiling stm32f10x_it.c...
+ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
+  void MainMenuItemShow();
+ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
+  void MainMenuIntoSubMenu();
+..\HARDWARE\NET\net.h(21): warning:  #1295-D: Deprecated declaration SwitchDetect - give arg types
+  void SwitchDetect( );
+stm32f10x_it.c: 3 warnings, 0 errors
+compiling system_stm32f10x.c...
+compiling ui.c...
+ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
+  void MainMenuItemShow();
+ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
+  void MainMenuIntoSubMenu();
+ui.c(136): warning:  #223-D: function "memset" declared implicitly
+      memset(dev->ShorAddr,0,4);
+ui.c(335): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+      OLED_ShowString(56,0,ShortAddr,4); 
+ui.c: 4 warnings, 0 errors
+compiling led.c...
+compiling key.c...
+compiling oled.c...
+compiling timer.c...
+compiling Usart3.c...
+..\HARDWARE\USART3\Usart3.c(107): warning:  #223-D: function "Uart1_Put_Char" declared implicitly
+          Uart1_Put_Char(*(Str+i));
+..\HARDWARE\USART3\Usart3.c(108): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\USART3\Usart3.c: 2 warnings, 0 errors
+compiling edp.c...
+..\HARDWARE\EDP\edp.c(319): warning:  #940-D: missing return statement at end of non-void function "edpCommandReqParse"
+  }
+..\HARDWARE\EDP\edp.c(336): warning:  #940-D: missing return statement at end of non-void function "edpPushDataParse"
+  }
+..\HARDWARE\EDP\edp.c: 2 warnings, 0 errors
+compiling Usart2.c...
+..\HARDWARE\USART2\Usart2.c(73): warning:  #550-D: variable "data" was set but never used
+      u8 data;
+..\HARDWARE\USART2\Usart2.c(16): warning:  #177-D: variable "data_to_send" was declared but never referenced
+  static u8 data_to_send[50];   //·¢ËÍÊý¾Ý»º´æ
+..\HARDWARE\USART2\Usart2.c: 2 warnings, 0 errors
+compiling net.c...
+..\USER\ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
+  void MainMenuItemShow();
+..\USER\ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
+  void MainMenuIntoSubMenu();
+..\HARDWARE\NET\net.h(21): warning:  #1295-D: Deprecated declaration SwitchDetect - give arg types
+  void SwitchDetect( );
+..\HARDWARE\NET\net.c(280): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
+..\HARDWARE\NET\net.c(280): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
+..\HARDWARE\NET\net.c(280): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
+..\HARDWARE\NET\net.c: 6 warnings, 0 errors
+compiling eeprom.c...
+compiling delay.c...
+compiling sys.c...
+compiling usart.c...
+..\USER\ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
+  void MainMenuItemShow();
+..\USER\ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
+  void MainMenuIntoSubMenu();
+..\SYSTEM\usart\usart.c(226): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+        strcat(dev->ShorAddr,addr);
+..\SYSTEM\usart\usart.c(35): warning:  #177-D: variable "data_to_send" was declared but never referenced
+  static u8 data_to_send[50];
+..\SYSTEM\usart\usart.c: 4 warnings, 0 errors
+compiling core_cm3.c...
+assembling startup_stm32f10x_md.s...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_flash.c...
+linking...
+Program Size: Code=21068 RO-data=2340 RW-data=4212 ZI-data=3124  
+FromELF: creating hex file...
+"..\OBJ\OLED.axf" - 0 Error(s), 26 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\www\stm32_for_smarthome\USER\RTE
+  D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0
+
+<h2>Collection of Component Files used:</h2>
+Load "..\\OBJ\\OLED.axf" 
+Set JLink Project File to "E:\www\stm32_for_smarthome\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103CB" selected (128 KB flash, 20 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.91b, compiled Sep 15 2014 09:17:56
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 12345678 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103CB
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 1000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
