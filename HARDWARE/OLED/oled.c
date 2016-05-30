@@ -212,8 +212,6 @@ void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned 
 //初始化SSD1306					    
 void OLED_Init(void)
 { 	
- 
- 	 
  	GPIO_InitTypeDef  GPIO_InitStructure;
  	
  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);	 //使能A端口时钟
@@ -224,10 +222,7 @@ void OLED_Init(void)
  	GPIO_Init(GPIOB, &GPIO_InitStructure);	  //初始化GPIOD3,6
  	GPIO_SetBits(GPIOB,GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8|GPIO_Pin_9|GPIO_Pin_3);	
 
-
-
- 
-  OLED_RST_Set();
+  	OLED_RST_Set();
 	delay_ms(1);
 	OLED_RST_Clr();
 	delay_ms(2);

@@ -310,10 +310,10 @@ void SwitchDetect( )
             StartToUploadFlag = 0;
             ServerConnectState = 0;
             OLED_Clear();
-            OLED_ShowCHinese(0,4,48); //网络异常
-            OLED_ShowCHinese(0,4,64); 
-            OLED_ShowCHinese(0,4,80); 
-            OLED_ShowCHinese(0,4,96); 
+            OLED_ShowCHinese(32,4,59); //网络异常
+            OLED_ShowCHinese(48,4,60); 
+            OLED_ShowCHinese(64,4,61); 
+            OLED_ShowCHinese(80,4,62); 
             delay_ms(100);
             ConnectToDevice( );
             delay_ms(100);

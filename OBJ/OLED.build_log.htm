@@ -67,70 +67,20 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-s, 0 errors
+ if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
+..\HARDWARE\NET\net.c(325): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
+..\HARDWARE\NET\net.c: 6 warnings, 0 errors
 linking...
 Program Size: Code=21352 RO-data=2340 RW-data=4476 ZI-data=3124  
 FromELF: creating hex file...
-"..\OBJ\OLED.axf" - 0 Error(s), 6 Warning(s).
+"..\OBJ\OLED.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   E:\www\stm32_for_smarthome\USER\RTE
   D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0
 
 <h2>Collection of Component Files used:</h2>
-Load "..\\OBJ\\OLED.axf" 
-Set JLink Project File to "E:\www\stm32_for_smarthome\USER\JLinkSettings.ini"
-* JLink Info: Device "STM32F103CB" selected (128 KB flash, 20 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.91b, compiled Sep 15 2014 09:17:56
-Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
-Hardware: V8.00
-S/N : 12345678 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-Error: Flash Download failed  -  Target DLL has been cancelled
--D: argument of type "u8 *" is incompatible with parameter of type "const char *"
-          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
-..\HARDWARE\NET\net.c(319): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
-          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
-..\HARDWARE\NET\net.c(319): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
-          if(strstr(SaveRxBuffer,"Ai-Thinker Technology") || strstr(SaveRxBuffer,"wdt reset") || strstr(SaveRxBuffer,"wdt ready"))
-..\HARDWARE\NET\net.c: 6 warnings, 0 errors
-compiling usart.c...
-..\USER\ui.h(49): warning:  #1295-D: Deprecated declaration MainMenuItemShow - give arg types
-  void MainMenuItemShow();
-..\USER\ui.h(67): warning:  #1295-D: Deprecated declaration MainMenuIntoSubMenu - give arg types
-  void MainMenuIntoSubMenu();
-..\SYSTEM\usart\usart.c(225): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-        strcat(dev->ShorAddr,addr);
-..\SYSTEM\usart\usart.c(35): warning:  #177-D: variable "data_to_send" was declared but never referenced
-  static u8 data_to_send[50];
-..\SYSTEM\usart\usart.c: 4 warnings, 0 errors
-linking...
-Program Size: Code=21328 RO-data=2340 RW-data=4476 ZI-data=3124  
-FromELF: creating hex file...
-"..\OBJ\OLED.axf" - 0 Error(s), 21 Warning(s).
-
-<h2>Collection of Component include folders:</h2>
-  E:\www\stm32_for_smarthome\USER\RTE
-  D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0
-
-<h2>Collection of Component Files used:</h2>
-Load "..\\OBJ\\OLED.axf" 
-Set JLink Project File to "E:\www\stm32_for_smarthome\USER\JLinkSettings.ini"
-* JLink Info: Device "STM32F103CB" selected (128 KB flash, 20 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.91b, compiled Sep 15 2014 09:17:56
-Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
-Hardware: V8.00
-S/N : 12345678 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-Error: Flash Download failed  -  Target DLL has been cancelled
 Load "..\\OBJ\\OLED.axf" 
 Set JLink Project File to "E:\www\stm32_for_smarthome\USER\JLinkSettings.ini"
 * JLink Info: Device "STM32F103CB" selected (128 KB flash, 20 KB RAM).
