@@ -66,5 +66,6 @@ void RainSensorItemShow(int flag);
 void EndDeviceTag(int flag);
 void MainMenuIntoSubMenu();
 
+void FireAlarm();
 #endif
 

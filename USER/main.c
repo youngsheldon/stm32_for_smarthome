@@ -33,11 +33,12 @@ int main(void)
 	EEPROM_Init();
 	// ReadLedStatusFromFlash();
 	StartToUploadFlag = 1;
+	dev2.FireFlag = 1;
 	while(1) 
 	{		
 		if(ServerConnectState)
 		MainMenuIntoSubMenu();
 		SwitchDetect();
+		FireAlarm();
 	}
 }
-
